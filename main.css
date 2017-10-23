@@ -1,0 +1,149 @@
+@charset "utf-8";
+@font-face {
+	font-family: "ni7seg";
+	src: url(font/ni7seg.woff);
+}
+/* CSS Document */
+#machine_body{
+	margin: auto auto auto 20%;
+	width: 400px;
+	height: 810px;
+	float: left;
+}
+#machine_body *{
+	display: flex;
+	position: relative;
+}
+#console_buttons {
+	background-image: url("image/machine/console/console_background_1.png");
+	width: 28px; 
+	height: 120px;
+	display: block;
+}
+.button{
+	margin: 13px 0px 14px 8px;
+}
+.button:nth-of-type(1){
+	margin-top: 15px;
+}
+.button:hover {
+	box-shadow: 0px 0px 5px 1px #2F2F2F;
+	border: none;
+	border-radius: 20px;
+	z-index: 2;
+}
+#console_interface {
+	width: 95px;
+	height: 120px;
+}
+#console_interface_bg{
+	position: absolute;
+	z-index: 0;
+}
+#display-box {
+	width: 60px;
+	height: 34px;
+	margin: 12px auto auto;
+	background: url(image/machine/console/display.png) no-repeat center;
+}
+#display-box img {
+	position: absolute;
+}
+#display{
+	width: 52px;
+	height: 26px;
+	display: block;
+	margin: 8px auto auto;
+	text-align: center;
+	font-family: "ni7seg";
+	font-size: 16px;
+	color: #3f3f3f;
+}
+#coin-drop-box {
+	width: 83px;
+	height: 43px;
+	position: absolute;
+	margin: 65px 12px 0px 0px;
+}
+#coin-drop-box img{
+	position: absolute;
+}
+#coin-drop {
+	background-color: #333333;
+	z-index: -1;
+	width: 77px;
+	height: 100px;
+	margin: -60px auto auto 3px;
+}
+#coin-insert {
+	margin: 12px;
+}
+#coins {
+	width: 250px;
+	height: 250px;
+	margin: 300px auto auto 50%;
+	position: fixed;
+}
+.coin{
+	width: 50px;
+	height: 50px;
+}
+.normal {
+	z-index: 2;
+}
+.dropped {
+	position: absolute;
+}
+#dispenser-box {
+	position: absolute;
+	width: 66px;
+	height: 250px;
+	margin-top: -130px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0; 
+	right: 0; 
+	z-index: -1;
+}
+#dispenser-bg {
+	z-index: -2;
+}
+.dispenser-hide {
+	z-index: 0;
+}
+#cup-active {
+	position: absolute;
+	width: 66px;
+	height: 95px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0; 
+	right: 0; 
+	margin-top: 25px;
+	z-index: 0;
+	display: none;
+}
+#stream {
+	position: absolute;
+	background-color: #b4a88d;
+	width: 4px;
+	height: 25px;
+	margin-top: 130px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0; 
+	right: 0;
+	display: none;
+}
+#cup-sprite {
+	width: 66px;
+	height: 95px;
+	background-image: url("image/machine/cup_sprite.png");
+}
+.sAnimate {
+	animation: play 5s steps(55) forwards;
+}
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -3630px; }
+}
